@@ -1,19 +1,23 @@
-let primes = 2;
-
-const isPrime = n => {
-  const half = Math.ceil(n / 2);
-  for (let i = 2; i <= half; i++) {
-    if (n % i === 0) {
+const isPrime = number => {
+  for (let i = 2; i <= Math.ceil(Math.sqrt(number)); ++i) {
+    if (!(number % i)) {
       return false;
     }
   }
+
   return true;
 }
-for (let i = 2; i < 2000000; i++) {
-  if (i % 2 == 1) {
+
+const sumPrimes = stop => {
+  let primes = 2;
+
+  for (let i = 2; i < stop; i++) {
     if (isPrime(i)) {
       primes += i;
     }
   }
+
+  return primes;
 }
-console.log(primes);
+
+console.log(sumPrimes(2000000));
