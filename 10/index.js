@@ -11,7 +11,7 @@ const isPrime = number => {
 const sumPrimes = stop => {
   let primes = 2;
 
-  for (let i = 2; i < stop; i++) {
+  for (let i = 2; i < stop; ++i) {
     if (isPrime(i)) {
       primes += i;
     }
