@@ -9,8 +9,10 @@ int pythagorean(int num) {
             }
         }
     }
+
     return 0;
 }
+
 int main() {
     printf("%d\n", pythagorean(1000));
 }
